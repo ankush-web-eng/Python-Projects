@@ -1,0 +1,640 @@
+#   < ==============================================Week 2======================================================== >
+
+#<=============Q.1==============>
+# n = int(input("Enter Number"))
+# if n%7 ==0:
+#     print("True")
+# else:
+#     print("False")
+
+#<=============Q.2==============>
+
+# n = int(input("Enter the number:"))
+
+# def lastDigit(num):
+#     if num % 10 == 4:
+#         return 1
+#     else:
+#         return 0
+
+# star = lastDigit(n)
+# if star == 1:
+#     print("It's last digit is 4!")
+# else:
+#     print("Last digit is not 4!!")
+
+#<=============Q.3==============>
+
+# n = input("Enter a number:")
+# n = int(n)
+# if (n%10==4 and n%3==0):
+#     print("Successful")
+# else:
+#     print("False")
+
+# <=============Q.4==============>
+
+# n = input("Enter a number:")
+# n = int(n)
+# if (n%10==5 or n%7==0):
+#     print("Successful")
+# else:
+#     print("False")
+
+# <=============Q.5==============>
+
+# n = input("Enter a number:")
+# n = int(n)
+# if (n%5==0 and n%11==0):
+#     print("Successful")
+# else:
+#     print("False")
+
+# <=============Q.6==============>
+
+# a = int(input("Enter Number:"))
+# b = int(input("Enter Number:"))
+# c = int(input("Enter Number:"))
+# max = 0
+# max = a if a>b else  b
+# if max<c:
+#     max = c 
+# print(f"Max is {max}")
+
+
+# <=============Q.7==============>
+
+# a = int(input('Enter side os triangle'))
+# b = int(input('Enter side os triangle'))
+# c = int(input('Enter side os triangle'))
+# if a+b+c == 180:
+
+#     if a==90 or b==90 or c==90:
+#         print("Triangle is 'Right Angle'")
+#     elif a>90 or b>90 or c>90:
+#         print("Triangle is 'Obtuse'")
+#     else:
+#         print("Triangle is 'Acute'")
+# else:
+#     print("Enter valid angles")
+
+# <=============Q.8==============>
+
+# n = int(input("Enter your age:"))
+# if(n>=18):
+#     print("Eligible!")
+# else:
+#     print("Not Eligible")
+
+# <=============Q.9==============>
+
+# year = int(input("Enter the year:"))
+# if year %4 == 0:
+#     if year % 100 !=0:
+#         print("Leap Year!!")
+#     else:
+#         if year%400 ==0:
+#             print("Leap Year!!")
+#         else:
+#             print("Not a Leap Year!!")
+# else:
+#     print("Not a Leap Year!!")
+# <=============Q.11==============>
+
+# a = int(input("Enter a number:"))
+# b = int(input("Enter a number:"))
+# c = int(input("Enter a number:"))
+# d = int(input("Enter a number:"))
+# e = int(input("Enter a number:"))
+# avr = ((a+b+c+d+e)/5)
+# print(f"Average is {avr}")
+
+
+# <=============Q.12==============>
+    
+# a = int(input('Enter side os triangle'))
+# b = int(input('Enter side os triangle'))
+# c = int(input('Enter side os triangle'))
+# if a+b+c == 180:
+#     print("Valid")
+# else:
+#     print("invalid!")
+
+# <=============Q.13==============>
+
+# a = int(input("Enter number:"))
+# b = int(input("Enter number:"))
+# max = 0
+# max=a if a>b else  b
+# print(f"Max is {max}")
+
+# <=============Q.14==============>
+
+# a = int(input("Enter Number:"))
+# b = int(input("Enter Number:"))
+# c = int(input("Enter Number:"))
+# min = 0
+# min = a if a<b else b
+# min = c if min>c else min
+# print(f"Min is {min}")
+
+
+
+
+#  <===============================================Week 3=========================================================>
+
+#<==============Q.1==============>
+
+# n = int(input("Enter a number:"))
+# for i in range(1,n+1):
+#     print(i, sep="_")
+
+
+#<==============Q.2==============>
+
+# n = int(input("Enter a number:"))
+# for i in range(n,0,-1):
+#     print(i, sep="_")
+
+#<==============Q.3==============>
+
+# n = int(input("Enter a number:"))
+# for i in range(1,n+1):
+#     if i%2==0:
+#         print(i)
+
+#<==============Q.4==============>
+
+# n = int(input("Enter a number:"))
+# for i in range(1,n+1):
+#     if i%2!=0:
+#         print(i)
+
+#<==============Q.5==============>
+
+# n = int(input("Enter a NUmber:"))
+# sum = 0
+# for i in range(1, n+1):
+#     sum += i
+# print(f"Total sum is {sum}")
+
+#<==============Q.6==============>
+
+# n = int(input("Enter a number:"))
+# sum = 0
+# for i in range(1,n+1):
+#     if i%2==0:
+#         sum+=i
+# print(f"Sum of all even numbers is {sum}")
+
+#<==============Q.7==============>
+
+# n = int(input("Enter a number:"))
+# sum = 0
+# for i in range(1,n+1):
+#     if i%2!=0:
+#         sum+=i
+# print(f"Sum of all odd numbers is {sum}")
+
+
+#<==============Q.8==============>
+
+# # n = input("Enter the Number:")
+# # print(len(n))
+# n = int(input("Enter the Number:"))
+# c = 0
+# while n>1:
+#     rem = n/10
+#     c+=1
+#     n = rem
+# print(f"Total digits in Number are: {c}")
+
+#<==============Q.9==============>
+
+# n = int(input("Enter a Number:"))
+# sum = 0
+# while n>1:
+#     rem = int(n%10)
+#     sum += rem
+#     loop = n/10
+#     n = loop
+# print(f"Sum of digits is {sum}")
+
+#<==============Q.11==============>
+
+# a = int(input("Enter a number:"))
+# for i in range(1,11):
+#     print(f"{a} * {i} = {a*i}")
+
+#<==============Q.12==============>
+
+# a = int(input("Enter base: "))
+# b = int(input("Enter power: "))
+
+# print(f"Answer is {a**b}")
+
+
+# <====================================Week 4==================================================================>
+
+#<=============Q.1=================>
+
+# a = int(input("Enter a number:"))
+# for i in range(1,a+1):
+#     print("*"*a)
+
+
+#<=============Q.2=================>
+    
+# a = int(input("Enter a number:"))
+# for i in range(1,a+1):
+#     print("*"*i)
+
+#<=============Q.3=================>
+    
+# a = int(input("Enter a number:"))
+# for i in range(1,a+1):
+#     print("*"*((a+1)-i))
+
+#<=============Q.4=================>
+
+# a = int(input("Enter height: "))
+# for i in range(1,a+1):
+#     for j in range(1,i+1):
+#         if j%2==0:
+#             print("*",end="")
+#         else:
+#             print(j, end="")
+#     print()
+
+#<=============Q.5=================>
+
+# a = int(input("Enter height: "))
+# b = int(input("Enter width: "))
+# for i in range(1,a+1):
+#     print("*" + "_"*(b-2) + "*")
+
+#<=============Q.6=================>
+
+# a = int(input("Enter height: "))
+# b = int(input("Enter width: "))
+# for i in range(1,a+1):
+#     print("*" + "_"* (b-i-1) + "*")
+
+#<=============Q.7=================>
+    
+# a = int(input("Enter height: "))
+# for i in range(1,a+1):
+#     print("_"*(a-i)+ "*"*i)
+
+#<=============Q.8=================>
+
+# a = int(input("Enter height: "))
+
+# for i in range(a):
+    # print("_"*i + "*"*(a-i))
+
+#<=============Q.9=================>
+
+# a = int(input("Enter height:"))
+
+# for i in range(a):
+#     print("*"*(a-i) + " " * i +" " * i + "*"*(a-i))
+
+#<=============Q.10=================>
+    
+# a = int(input("Enter height:"))
+
+# for i in range(1,a+1):
+#     print("*"*i + " " * (a-i) + " " * (a-i) + "*"*i)
+
+#<=============Q.11=================>
+
+# a = int(input("Enter height: "))
+
+# for i in range(a):
+#     print("*"*(a-i) + " " * i +" " * i + "*"*(a-i))
+# for i in range(1,a+1):
+#     print("*"*i + " " * (a-i) + " " * (a-i) + "*"*i)
+
+#<=============Q.12=================>
+
+# for i in range(1,10):
+#     for j in range(1,i+1):
+#         print(j,end="")
+#     print()
+
+#<=============Q.13=================>
+
+# for i in range(5,0, -1):
+#     for j in range(1,i+1):
+#         print(j,end="")
+#     print()
+
+#<=============Q.14=================>
+
+# k=1
+# for i in range(1,5):
+#     for j in range(i):
+#         print(k,end="")
+#         k +=1
+#     print()
+
+#<=============Q.15=================>
+
+# a = int(input("Enter height: "))
+# for i in range(1,a+1):
+#     print("*"*i)
+# for i in range(1,a+1):
+#     print("*"*(a-i))
+
+#< ==== Practice==== >
+
+# a = int(input("Enter height:"))
+# for i in range(1,a+1):
+#     for j in range(a,i,-1):
+#         print(" ", end="")
+#     for k in range(i,1,-1):
+#         print(k,end="")
+#     for l in range(1,i+1):
+#         print(l,end="")
+#     print()
+
+# for i in range(a,0,-1):
+#     for j in range(a-i+1):
+#         print(" ",end="") 
+#     for k in range(1,i-1):
+#         print((i-k),end="")
+#     for l in range(1,i):
+#         print(l,end="")
+#     print()
+
+#< ==== Practice==== >
+
+# a = int(input("Enter height:"))
+# for i in range(1,1+a):
+#     for j in range(a,i,-1):
+#         print(" ", end="")
+#     print("*",end="")
+#     for j in range(1,i):
+#         print(" ", end="")
+#         print(" ", end="")
+#     print("*", end="")
+#     print()
+# for i in range(a,0,-1):
+#     for j in range(a-i+1):
+#         print(" ", end="")
+#     print("*", end="")
+#     for k in range(1,i):
+#         print(" ", end="")
+#         print(" ", end="")
+#     print("*", end="")
+#     print()
+# for i in range(a,0,-1):
+#     for j in range(a-i+1):
+#         print(" ",end="") 
+#     for k in range(1,i):
+#         print(" ",end="")
+#     print("*", end="")
+#     for l in range(1,i):
+#         print(l,end="")
+#     print()
+
+# <====================================Week 5==================================================================>
+
+#<=============Q.1=================>
+
+# A = [1,2,3,4,5]
+# sum = 0
+# for a in A:
+#     sum  += a
+# print(f"Sum is {sum}")
+
+#<=============Q.2=================>
+
+# A = [1,2,3,4,5]
+# B = []
+# b = int(input("Scaler: "))
+# for a in A:
+#     a += b
+#     B.append(a)
+# print(B)
+
+# n = int(input("Enter number of elements in your array: "))
+# l = list()
+# for a in range(n):
+#     p = int(input("Enter Element:"))
+#     l.append(p)
+# print(l)
+
+#<=============Q.3=================>
+
+# n = int(input("Enter number of elements in your array: "))
+# A = list()
+# for a in range(n):
+#     p = int(input("Enter Element:"))
+#     A.append(p)
+# max = 0
+# for i in A:
+#     if max<i:
+#         max = i
+# print(f"MAx is {max}")
+
+#<=============Q.4=================>
+
+# n = int(input("Enter number of elements in your array: "))
+# A = list()
+# for a in range(n):
+#     p = int(input("Enter Element:"))
+#     A.append(p)
+# s = int(input("Enter Element to be searched:"))
+# for k in A:
+#     if k == s:
+#         print(f"Element is present!!")
+    
+#<=============Q.5=================>
+
+# n = int(input("Enter number of elements in your array: "))
+# A = list()
+# B = list()
+# for a in range(n):
+#     p = int(input("Enter Element:"))
+#     A.append(p)
+# for i in A:
+#     if i < 0:
+#         B.append(i)
+# print(B)
+
+#<=============Q.6================>
+
+# n = int(input("Enter number of elements in your array: "))
+# A = list()
+# for a in range(n):
+#     p = int(input("Enter Element:"))
+#     A.append(p)
+# even = 0
+# odd = 0
+# for i in A:
+#     if i%2==0:
+#         even += 1
+#     else:
+#         odd +=1
+# print(f"Absolute Diffesrence is {abs(even-odd)}")
+
+#<=============Q.7=================>
+
+# n = int(input("Enter number of elements in your array: "))
+# A = list()
+# E = list()
+# O = list()
+# for a in range(n):
+#     p = int(input("Enter Element:"))
+#     A.append(p)
+# for i in A:
+#     if i %2==0:
+#         E.append(i)
+#     else:
+#         O.append(i)
+# print(f"Even elements are {E}")
+# print(f"Odd elements are {O}")
+
+#<=============Q.8=================>
+
+# n = int(input("Enter number of elements in your array: "))
+# A = list()
+# S = list()
+# for a in range(n):
+#     p = int(input("Enter Element:"))
+#     A.append(p)
+# for i in A:
+#     p = i*i
+#     S.append(p)
+# print(S)
+
+# <=============Q.9=================>
+
+# n = int(input("Enter number of elements in your array: "))
+# A = list()
+# S = list()
+# for a in range(n):
+#     p = int(input("Enter Element:"))
+#     A.append(p)
+# for i in A:
+#     p = i*i*i
+#     S.append(p)
+# print(S)
+
+# <=============Q.9=================>
+
+# n = int(input("Enter number of elements in your array: "))
+# A = list()
+# R = list()
+# for a in range(n):
+#     p = int(input("Enter Element:"))
+#     A.append(p)
+# A.reverse()
+
+# <====================================Week 5==================================================================>
+
+def inputString():
+    string = input("Enter the String:")
+    return string
+
+# <=============Q.1=================>
+
+# a =  int(input("Enter number of elements: "))
+# li = []
+
+# for i in range(a):
+#     li.append(input("Enter String: "))
+
+# for i in li:
+#     vo = 0
+#     for j in i:
+#         if j in "aeiouAEIOU":
+#             vo += 1
+
+#     print(f"Number of vowels in {i} are: {vo}")
+
+
+# <=============Q.2=================>
+
+# st = input("Enter a String: ")
+# print(len(st))
+
+# <=============Q.3=================>
+
+# n = int(input("Enter length of String: "))
+# li = []
+
+# for i in range(n):
+#     li.append(input("Enter your String: "))
+# for j in li:
+#     print(int(j==j[::-1]))
+
+# <=============Q.4=================>
+
+# st = input("Enter a String: ")
+# for i in range(len(st)):
+#     if st[i] != "*":
+#         pr = st[i::]
+#         break
+# st = pr
+# pt = st[::-1]
+# for i in range(len(pt)):
+#     if pt[i] != "*":
+#         kt = pt[i::]
+#         break
+# st = kt[::-1]
+# print(st)
+
+# <=============Q.5=================>
+
+# n = int(input("Enter number of String: "))
+# li = []
+# ki = []
+# for i in range(n):
+#     li.append(input("Enter you Word: "))
+
+# for i in li:
+#     t = i[::-1]
+#     ki.append(t)
+# print(ki)
+
+# <=============Q.6=================>
+
+# a = input('Enter a String:')
+# print(a[::-1])
+
+# <=============Q.7=================>
+
+# s = input("Enter a String:")
+# n = int(input("Enter ASCII code:"))
+# if chr(n) in s:
+#     print(s.find(chr(n)))
+# else:
+#     print("Doesn't Exist!!")
+
+# <=============Q.8=================>
+
+# a = input("Enter first Sting: ")
+# b = input("Enter second Sting: ")
+# if b in a:
+#     print(a.find(b))
+# else:
+#     print("!!!!")
+
+# <=============Q.9=================>
+
+# string = ["A", "n", "k", "U", "s", "H"]
+# p = []
+# for i in string:
+#     p.append(i.lower())
+# print(p)
+
+# <=============Q.10=================>
+
+# string = ["A", "n", "k", "U", "s", "H"]
+# p = []
+# for i in string:
+#     p.append(i.capitalize())
+# print(p)
