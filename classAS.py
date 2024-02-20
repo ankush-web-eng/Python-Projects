@@ -639,3 +639,98 @@ def inputString():
 #     p.append(i.capitalize())
 # print(p)
 
+# <===================================Week 7==========================================>
+
+# <==============Q.1===============>
+
+# l1 = eval(input("Enter: "))
+# l2 = eval(input("Enter: "))
+# l = []
+# for i in set(l1):
+#     if i in l2:
+#         x = min(l1.count(i), l2.count(i))
+#         y = [i]*x
+#         l.extend(y)
+# print(l)
+
+# <==============Q.2===============>
+
+# l = eval(input("Enter: "))
+# for i in l:
+#     if l.count(i)>1:
+#         print(i)
+#         break
+# else:
+#     print("-1")
+
+# <==============Q.3===============>
+
+# s=input("Enter your String: ")
+# if len(s)%2==0:
+#     for i in set(s):
+#         if s.count(i) %2 != 0:
+#             print(0)
+#             break
+#     else:
+#         print(1)
+# else:
+#     c = 0
+#     for i in set(s):
+#         if s.count(i) %2 !=0 and c == 0:
+#             c +=1
+#         elif s.count(i)%2!=0:
+#             print(0)
+#             break
+#     else:
+#         print(1)
+
+# <==============Q.4===============>
+
+# l = []    
+# F = int(input("Enter frequency: "))
+# N = int(input("Enter no. of trees: "))
+# for i in range(N):
+#     l.append(int(input("Enter height: ")))
+# c = 0
+# for i in set(l):
+#     if l.count(i) == F:
+#         c += i
+# if c == 0:
+#     print(-1)
+# else:
+#     print(c)
+
+# <==============Q.5===============>
+
+# l = []
+# N = int(input("Enter no. of elements: "))
+# for i in range(N):
+#     l.append(int(input("Element: ")))
+# # s = l[::-1]
+# m = []
+# c=0
+# for i in range(len(l)):
+#     for j in range(len(l)-1, -1,-1):
+#         if l[i] == l[j] and i != j:
+#             # print(i,j)
+#             s = abs(i-j)
+#             m.append(s)
+#             c +=1
+# m.sort()
+# # print(m)
+# if c == 0:
+#     print(-1)
+# else:
+#     print(m[0])
+#     # print(c)
+
+# ==================================================================
+def wrap(string, max_width):
+    j = 0
+    p = ''
+    while j < len(string):
+        p += string[j:max_width+j]
+        j += max_width
+        print(p)
+        p = ''
+wrap('ankushankushankush', 6)
