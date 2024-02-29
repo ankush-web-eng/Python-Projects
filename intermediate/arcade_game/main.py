@@ -22,6 +22,12 @@ screen.onkey(l_paddle.go_up,"w")
 screen.onkey(l_paddle.go_down,"s")
 
 is_game_on = True
+
+# def is_game_over():
+#     is_game_on = False
+
+# screen.listen(is_game_over, "o")
+
 while is_game_on:
     time.sleep(ball.move_speed)
     screen.update()
@@ -45,7 +51,6 @@ while is_game_on:
         ball.reset_position()
         scoreboard.end_game()
         is_game_on = False
-
 
 
 screen.exitonclick()
