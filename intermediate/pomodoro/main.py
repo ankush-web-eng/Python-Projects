@@ -61,17 +61,17 @@ def count_down(count):
             mark += "✔️"
         check_marks.config(text=mark)
 
-# UI SETUP
+# UI Setup
 
 window = Tk()
 window.title("Pomodoro")
 window.config(padx=100, pady=50, bg=YELLOW)
 
-
+#title
 title_label = Label(text="Timer", fg=GREEN, font=(FONT_NAME, 50, "bold"), bg=YELLOW)
 title_label.grid(column=1, row=0)
 
-
+#canvas
 canvas = Canvas(height=200, width=224, bg=YELLOW, highlightthickness=0)
 my_image = PhotoImage(file="tomato.png")
 canvas.create_image(103,80, image=my_image)
@@ -79,6 +79,7 @@ timer_text = canvas.create_text(103,90, font=(FONT_NAME, 35, "bold"), fill="whit
 canvas.grid(column=1, row=1)
 
 
+#buttons
 start_btn = Button(text="Start", highlightthickness=0 , command=start_timer)
 start_btn.grid(column=0, row=2)
 
@@ -87,5 +88,6 @@ end_btn.grid(column=2, row=2)
 
 check_marks = Label(fg=GREEN, bg=YELLOW)
 check_marks.grid(column=1, row=3)
+
 
 window.mainloop()
