@@ -724,7 +724,8 @@ def inputString():
 #     print(m[0])
 #     # print(c)
 
-# ==================================================================
+# <==============================Practice====================================>
+
 # def wrap(string, max_width):
 #     j = 0
 #     p = ''
@@ -735,20 +736,29 @@ def inputString():
 #         p = ''
 # wrap('ankushankushankush', 6)
 
-n = int(input("Enter no.: "))
-li = []
-for i in range(2,n+1):
-    flag = True
-    for j in range(2,(i//2)+1):
-        if i % j == 0:
-            flag = False
-            break
-    if flag:
-        li.append(i)
-print(li)
-l2 = []
-for i in range(len(li)):
-    for j in range(len(li)):
-        if li[i] + li[j] == n:
-            l2.append([li[i], li[j]])
-print(l2)
+
+# n = int(input("Enter no.: "))
+# li = []
+# for i in range(2,n+1):
+#     flag = True
+#     for j in range(2,(i//2)+1):
+#         if i % j == 0:
+#             flag = False
+#             break
+#     if flag:
+#         li.append(i)
+# print(li)
+# l2 = []
+# for i in range(len(li)):
+#     for j in range(len(li)):
+#         if li[i] + li[j] == n:
+#             l2.append([li[i], li[j]])
+# print(l2)
+
+from random import randint
+
+names = ["Ankush", "Abhay", "Harshit", "Abhishek", "Anant"]
+scores = {student:randint(1,100) for student in names}
+print(scores)
+passed = {student:score for (student, score) in scores.items() if score > 48}
+print(passed)
