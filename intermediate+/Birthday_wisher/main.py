@@ -5,7 +5,7 @@ import smtplib
 import os
 from dotenv import load_dotenv
 
-load_dotenv("../.env")
+load_dotenv("../../.env")
 
 MY_EMAIL = "ankushinstagram57@gmail.com"
 MY_PASSWORD = os.getenv("EMAIL_PASSWORD")
