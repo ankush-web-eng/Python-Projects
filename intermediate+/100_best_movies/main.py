@@ -13,6 +13,6 @@ for movie in all_movies:
     movies_titles.append(movie.text)
 # print(movies_titles)
 movies_titles.reverse()
-with open("movies.txt", "w") as file_:
+with open(file="movies.txt", mode="w", encoding="utf-8") as file_:
     for title in movies_titles:
         file_.write(f"{title}\n")
