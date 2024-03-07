@@ -755,10 +755,20 @@ def inputString():
 #             l2.append([li[i], li[j]])
 # print(l2)
 
-from random import randint
+# from random import randint
 
-names = ["Ankush", "Abhay", "Harshit", "Abhishek", "Anant"]
-scores = {student:randint(1,100) for student in names}
-print(scores)
-passed = {student:score for (student, score) in scores.items() if score > 48}
-print(passed)
+# names = ["Ankush", "Abhay", "Harshit", "Abhishek", "Anant"]
+# scores = {student:randint(1,100) for student in names}
+# print(scores)
+# passed = {student:score for (student, score) in scores.items() if score > 48}
+# print(passed)
+
+p = [1,2,3,2,1,2,3]
+s = p
+# print(s)
+freq = {}
+for i in s:
+    freq[i] = s.count(i)
+    while i in s:
+        s.remove(i)
+print(freq)
