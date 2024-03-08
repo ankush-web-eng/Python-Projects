@@ -763,12 +763,27 @@ def inputString():
 # passed = {student:score for (student, score) in scores.items() if score > 48}
 # print(passed)
 
-p = [1,2,3,2,1,2,3]
-s = p
+# p = [1,2,3,2,1,2,3]
+# s = p
+# # print(s)
+# freq = {}
+# for i in s:
+#     freq[i] = s.count(i)
+#     while i in s:
+#         s.remove(i)
+# print(freq)
+
+# a = "Ankush Deshwal"
+# b = a.split()
+
+# li = []
+
+# for i in range(len(min(b))):
+#     li.append(b[0][i])
+#     li.append(b[1][i])
+#     min = i
+# s = "".join(li)
+# p = max(b)
+# p = p[min+1:len(p)]
+# s += p
 # print(s)
-freq = {}
-for i in s:
-    freq[i] = s.count(i)
-    while i in s:
-        s.remove(i)
-print(freq)
