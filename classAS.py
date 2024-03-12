@@ -535,9 +535,6 @@
 
 # <====================================Week 5==================================================================>
 
-def inputString():
-    string = input("Enter the String:")
-    return string
 
 # <=============Q.1=================>
 
@@ -787,3 +784,192 @@ def inputString():
 # p = p[min+1:len(p)]
 # s += p
 # print(s)
+
+
+# <==================================Week 7 Updated ========================================>
+
+# <================Q.1================>
+
+# li = []
+# for i in range(int(input("Enter number of elements: "))):
+#     s = int(input("Element: "))
+#     li.append(s)
+# p = int(input("Enter the element to be searched: "))
+# # c = 0
+# for i in li:
+#     if i==p:
+#         c = li.count(i)
+# print(f"Frequency of {p} is {c}")
+
+# <================Q.2================>
+
+# li = []
+# for i in range(int(input("Enter number of elements: "))):
+#     s = int(input("Enter: "))
+#     li.append(s)
+# p = []
+# for i in li:
+#     p.append(li.count(i))
+# for i in li:
+#     if li.count(i) == min(p):
+#         print(f"The least common element is {i}")
+#         break
+
+# <================Q.3================>
+
+# s=input("Enter your String: ")
+# if len(s)%2==0:
+#     for i in set(s):
+#         if s.count(i) %2 != 0:
+#             print(0)
+#             break
+#     else:
+#         print(1)
+# else:
+#     c = 0
+#     for i in set(s):
+#         if s.count(i) %2 !=0 and c == 0:
+#             c +=1
+#         elif s.count(i)%2!=0:
+#             print(0)
+#             break
+#     else:
+#         print(1)
+
+# <================Q.4================>
+   
+# li = []
+# for i in range(int(input("Enter number of elements: "))):
+#     s = int(input("Enter: "))
+#     li.append(s)
+# p = []
+# flag = True
+# for i in li:
+#     if li.count(i) > 1:
+#         print(f"The first repeating element is {i}")
+#         flag = False
+#         break
+# if flag:
+#     print(-1)
+
+# <================Q.5================>
+
+# dict1 = {'Ten': 10, 'Twenty': 20, 'Thirty': 30}
+# dict2 = {'Thirty': 30, 'Fourty': 40, 'Fifty': 50}
+
+# dict2.update(dict1)
+# print(dict2)
+
+# <================Q.6================>
+
+# dict1 = {'a': 100, 'b': 400, 'c': 300}
+# n = 100
+# for (key, value) in dict1.items():
+#     if n == value:
+#         print(True)
+#         break
+
+# <================Q.7================>
+
+# person = {"name": "abc", "age": 25}
+# for (key, value) in person.items():
+#     print(key)
+
+# <================Q.8================>
+
+# person = {"name": "abc", "age": 25}
+# for (key, value) in person.items():
+#     print(value)
+    
+# <================Q.9================>
+
+# person = {"name": "abc", "age": 25}
+# for (key, value) in person.items():
+#     print(key, value)
+
+# <================Q.10================>
+
+# person = {"name": "abc", "age": 25}
+# for i in range(len(person)):
+#     person.popitem()
+# print(person)
+
+# <================Q.11================>
+
+# person = {"name": "abc", "age": 25}
+# li = []
+# for (key, value) in person.items():
+#     li.append(key)
+# print(li)
+
+# <================Q.12================>
+
+# person = {"name": "abc", "age": 25}
+# li = []
+# for (key, value) in person.items():
+#     li.append(value)
+# print(li)
+
+# <================Q.13================>
+
+# li = {}
+# for i in range(1,int(input("Enter Range: "))+1):
+#     li[i] = i*i
+# print(li)
+
+# <================Q.14================>
+
+# dict1 = { 1: 'a', 2: 'b', 3: 'c' }
+# t = []
+# for (key, value) in dict1.items():
+#     t.append((key,value))
+# print(t)
+
+# <================Q.15================>
+
+# dict1 = {2: 'Apple', 1:'Mango', 3:'Orange', 4:'Banana'}
+# a = []
+# for i in dict1:
+#     a.append(i)
+# a.sort()
+# for i in a:
+#     print(i,dict1[i])
+
+# <================Q.16================>
+
+# A = [1, 2, 2, 1]
+# B = [2, 3, 1, 2]
+# l = []
+# for i in A:
+#     if i in B:
+#         l.append(i)
+#         B.remove(i)
+# print(l)
+
+# <================Q.17================>
+
+# print([i*i for i in range(1,int(input("Enter Range: "))+1)])
+
+# <================Q.18================>
+
+# print([i for i in range(1,int(input("Enter Number: "))+1) if i%2==0])
+
+# <================Q.19================>
+
+# print([i.upper() for i in input() ])
+
+
+# <==============================Practice====================================>
+
+def solve(s):
+    s = s.split()
+    p = []
+    for i in s:
+       for j in i:
+           p.append(i.replace(j,j.upper()))
+           break
+    return  "".join(p)
+
+s = input()
+result = solve(s)
+print(result)
