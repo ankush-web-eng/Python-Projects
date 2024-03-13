@@ -961,15 +961,12 @@
 
 # <==============================Practice====================================>
 
-def solve(s):
-    s = s.split()
-    p = []
-    for i in s:
-       for j in i:
-           p.append(i.replace(j,j.upper()))
-           break
-    return  "".join(p)
-
-s = input()
-result = solve(s)
-print(result)
+from collections import Counter
+li = [1,2,3,4,1,2,3,4,5,3,3,5,1,3,8]
+p = Counter(li)
+d = [i for i in p.items()]
+# print(d)
+sp = {}
+for i in d:
+    sp[i[0]] = i[1]
+print(sp)
