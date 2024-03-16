@@ -961,12 +961,28 @@
 
 # <==============================Practice====================================>
 
-from collections import Counter
-li = [1,2,3,4,1,2,3,4,5,3,3,5,1,3,8]
-p = Counter(li)
-d = [i for i in p.items()]
-# print(d)
-sp = {}
-for i in d:
-    sp[i[0]] = i[1]
-print(sp)
+# from collections import Counter
+# li = [1,2,3,4,1,2,3,4,5,3,3,5,1,3,8]
+# p = Counter(li)
+# d = [i for i in p.items()]
+# # print(d)
+# sp = {}
+# for i in d:
+#     sp[i[0]] = i[1]
+# print(sp)
+
+s = "Banana"
+p = h = ""
+sc = kc = 0
+for i in s:
+    if i in "AEIOUaeiou":
+        for j in range(s.index(i),len(s)):
+            p += s[j:j+1]
+            print(p)
+        break
+for i in s:
+    if i not in "AEIOUaeiou":
+        for j in range(s.index(i),len(s)):
+            h += s[j:j+1]
+            print(h)
+        break
