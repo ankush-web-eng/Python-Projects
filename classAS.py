@@ -971,18 +971,3 @@
 #     sp[i[0]] = i[1]
 # print(sp)
 
-s = "Banana"
-p = h = ""
-sc = kc = 0
-for i in s:
-    if i in "AEIOUaeiou":
-        for j in range(s.index(i),len(s)):
-            p += s[j:j+1]
-            print(p)
-        break
-for i in s:
-    if i not in "AEIOUaeiou":
-        for j in range(s.index(i),len(s)):
-            h += s[j:j+1]
-            print(h)
-        break
