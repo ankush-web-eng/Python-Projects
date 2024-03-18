@@ -971,3 +971,61 @@
 #     sp[i[0]] = i[1]
 # print(sp)
 
+# <==================================Week 8========================================>
+
+import math
+
+# <================Q.1================>
+
+# def root(n:int):
+#     root = str(math.sqrt(n))
+#     li = root.split(".")
+#     # print(li)
+#     if li[1][0]  == '0':
+#         return int(li[0])
+#     else:
+#         return -1
+# print(root(int(input("Enter Number: "))))
+
+# <================Q.2================>
+
+# def square(n:int):
+#     return n*n
+# print(square(int(input("Enter Number: "))))
+
+# <================Q.3================>
+
+# def area(n:int):
+#     return 2*math.pi*n
+# print('{:.2f}'.format(area(int(input("Enter the radius of a circle: ")))))
+
+# <================Q.4================>
+
+# def power(a:int, b:int):
+#     return a**b
+# print(power(int(input("Enter first Number: ")), int(input("Enter Second number: "))))
+
+# <================Q.5================>
+
+# def cube(n:int):
+#     return n**3
+# print(cube(int(input("Enter Number: "))))
+
+# <================Q.6================>
+
+# def volume(n:int):
+#     return (4*math.pi*(n**3))/3
+# print(math.ceil(volume(int(input("Enter Number: ")))))
+
+# <================Q.7================>
+
+# def ellipse(a:int, b:int):
+#     return math.pi*a*b
+# print('{:.2f}'.format(ellipse(int(input("Enter semi-major axis: ")), int(input("Enter semi-minor axis:")))))
+
+# <================Q.8================>
+
+# def slist(n:list):
+#     return sum(n)
+# print(slist(map(int,input().split())))
+
