@@ -1029,3 +1029,81 @@ import math
 #     return sum(n)
 # print(slist(map(int,input().split())))
 
+# <====================================Extra Questions==============================>
+
+# <================Q.1================>
+
+# def factorial(n):
+#     if n == 0:
+#         return 1
+#     else:
+#         return n * factorial(n-1)
+
+# def sumof(n):
+#     return sum(factorial(i) for i in range(1, n+1))
+
+# print(sumof(int(input("Enter String: "))))
+
+
+# <================Q.2================>
+
+# def sumof(n):
+#     su = 0
+#     for i in range(2,n+1):
+#         for j in range(2,i):
+#             if i % j == 0:
+#                 break
+#         else:
+#             su += i
+#     return su
+# print(sumof(int(input('Enter the number : '))))
+
+# <================Q.3================>
+
+# def fibo_even(n):
+#     fib = [0,1]
+#     su = 0
+#     for i in range(2,n):
+#         fib.append(fib[i-2] + fib[i-1])
+#     print(fib)
+#     for i in fib:
+#         if i%2 == 0:
+#             su+=i
+#     return su
+# print(fibo_even(int(input("Enter a Number : "))))
+
+# <================Q.4================>
+
+# def fibo_odd(n):
+#     fib = [0,1]
+#     su = 0
+#     for i in range(2,n):
+#         fib.append(fib[i-2] + fib[i-1])
+#     print(fib)
+#     for i in fib:
+#         if i%2 != 0:
+#             su+=i
+#     return su
+# print(fibo_odd(int(input("Enter a Number : "))))
+
+# <================Q.5================>
+
+# def per_square(n:int) -> int:
+#     p = su =  0
+#     for i in range(1,n+1):
+#         su += i**2
+#         p = i**2
+#         if p >= n:
+#             break
+#     return su
+# print(per_square(int(input("Enter a Number : "))))
+
+# <================Q.R================>
+
+n = input("Enter String: ")
+li = n.split()
+ci = []
+for i in li:
+    ci.append(i[::-1])
+print(' '.join(ci))
+print(" ".join(li[::-1]))
