@@ -1100,10 +1100,23 @@ import math
 
 # <================Q.R================>
 
-n = input("Enter String: ")
-li = n.split()
-ci = []
-for i in li:
-    ci.append(i[::-1])
-print(' '.join(ci))
-print(" ".join(li[::-1]))
+# n = input("Enter String: ")
+# li = n.split()
+# ci = []
+# for i in li:
+#     ci.append(i[::-1])
+# print(' '.join(ci))
+# print(" ".join(li[::-1]))
+
+essay = []
+isTrue = True
+print("type essay:")
+while isTrue:
+    n = input()
+    if n == "":
+        isTrue = False
+    else:
+        essay.append(n)
+p = " ".join(essay)
+with open("essay.txt", "w") as file:
+    file.write(p)
