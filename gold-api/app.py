@@ -1,99 +1,41 @@
 from flask import Flask, jsonify
 import requests
-from datetime import datetime
-from flask import Flask, jsonify
-from datetime import datetime
+from bs4 import BeautifulSoup
 import json
-from dotenv import load_dotenv
-import os
-
-
-# from bs4 import BeautifulSoup
-# from selenium import webdriver
-# from selenium.webdriver.chrome.options import Options
-# from selenium.webdriver.common.by import By
-load_dotenv()
-
+from datetime import datetime
 
 app = Flask(__name__)
 
-def make_gapi_request():
-    api_key = os.getenv("GOLD_API_KEY")
-    symbol = "XAU"
-    curr = "INR"
-    date = ""
-
-    url = f"https://www.goldapi.io/api/{symbol}/{curr}{date}"
-    
-    headers = {
-        "x-access-token": api_key,
-        "Content-Type": "application/json"
-    }
-    
-    try:
-        response = requests.get(url, headers=headers)
-        response.raise_for_status()
-
-        response_str = response.text
-        response_data = json.loads(response_str)
-        price_gram_24k = response_data.get("price_gram_24k")
-        print("Price per gram of 24K gold:", price_gram_24k)
-        return price_gram_24k
-    except requests.exceptions.RequestException as e:
-        print("Error:", str(e))
-        return None
-
-
 @app.route('/', methods=['GET'])
-def home():
-    return "Welcome to the Gold Price API"
+def get_gold_price():
+    headers = {
+        'Host': 'www.livemint.com',
+        'sec-ch-ua': '"Google Chrome";v="129", "Not=A?Brand";v="8", "Chromium";v="129"',
+        'sec-ch-ua-mobile': '?0',
+        'sec-ch-ua-platform': '"Windows"',
+        'upgrade-insecure-requests': '1',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36',
+        'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,/;q=0.8,application/signed-exchange;v=b3;q=0.7',
+        'sec-fetch-site': 'cross-site',
+        'sec-fetch-mode': 'navigate',
+        'sec-fetch-user': '?1',
+        'sec-fetch-dest': 'document',
+        'referer': 'https://www.google.com/',
+        'accept-language': 'en-US,en;q=0.9',
+        'priority': 'u=0, i',
+    }
 
-@app.route('/get-gold-price', methods=['GET'])
-def gold_price_api():
-    price = make_gapi_request()
-    timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    response = requests.get('https://www.livemint.com/gold-prices', headers=headers)
+    soup = BeautifulSoup(response.text, 'html.parser')
     
-    if price:
-        return jsonify({
-            "gold_price": price,
-            "timestamp": timestamp
-        })
-    else:
-        return jsonify({
-            "error": "Unable to fetch the gold price",
-            "timestamp": timestamp
-        }), 500
+    tag = soup.select_one('script#__NEXT_DATA__').text
+    jsn = json.loads(tag)
+    city_list = jsn['props']['pageProps']['goldMetroCitiesData']
 
-if __name__ == '__main__':
-    app.run(debug=True)
+    for city in city_list:
+        if city['city'].lower() == 'delhi':
+            price = int(city['price24Cr']) / 10
+            timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+            return jsonify({'city': 'Delhi', 'price': price, 'timestamp': timestamp})
 
-# def get_gold_price():
-#     options = Options()
-#     options.page_load_strategy = 'normal'
-#     options.add_argument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)")
-#     options.add_experimental_option("excludeSwitches", ["enable-automation"])
-#     options.add_experimental_option('useAutomationExtension', False)
-#     options.add_argument('--disable-blink-features=AutomationControlled')
-#     options.add_argument("--no-sandbox")
-#     options.add_argument("--disable-dev-shm-usage")
-#     options.add_argument("--disable-infobars")
-#     options.add_argument("--disable-extensions")
-#     options.add_argument("--disable-popup-blocking")
-#     options.add_argument('--ignore-certificate-errors-spki-list')
-#     options.add_argument('--ignore-ssl-errors')
-#     options.add_argument("--headless=new")
-
-#     driver = webdriver.Chrome(options=options)
-
-#     try:
-#         url = 'https://www.goodreturns.in/gold-rates/'
-#         driver.get(url)
-#         element = driver.find_element(By.XPATH, '//*[@id="moneyweb-leftPanel"]/setion/div/div[2]/div[2]/p')
-#         gold_price = element.text
-#     except Exception as e:
-#         gold_price = None
-#         print(f"Error: {e}")
-#     finally:
-#         driver.quit()
-
-#     return gold_price
+    return jsonify({'error': 'City not found'}), 404
