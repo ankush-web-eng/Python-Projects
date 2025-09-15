@@ -1,8 +1,0 @@
-1. First I made a class and extracted a login form from it with validators.
-2. I passed the form to frontend and made a login form with WTF Flask.
-3. A secreat key was added.
-4. PasswordField and SubitField was added.
-5. Catch errors and render the list of errors with  flash messages.
-6. Validate the form with CSRF protection.
-7. Accept the data in backend without method POST for checking if everything is working.
-8. Add Bootstrap Templates
